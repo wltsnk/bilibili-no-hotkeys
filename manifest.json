@@ -1,8 +1,18 @@
 {
   "manifest_version": 3,
   "name": "B站快捷键自定义",
-  "version": "2.0.1",
-  "description": "在B站自由选择保留哪些键盘快捷键，其余全部禁用。",
+  "version": "2.1.0",
+  "description": "自由选择保留/禁用 B 站（bilibili）键盘快捷键，支持播放控制、弹幕互动等全场景定制",
+  "author": "wltsnk",
+  "icons": {
+    "16": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  },
+  "action": {
+    "default_title": "B站快捷键自定义",
+    "open_in_tab": "options.html"
+  },
   "permissions": ["storage"],
   "host_permissions": ["*://*.bilibili.com/*"],
   "content_scripts": [

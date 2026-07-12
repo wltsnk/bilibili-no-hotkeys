@@ -5,8 +5,6 @@ const playbackKeys = [
   { label: '快退', key: 'ArrowLeft' },
   { label: '音量增大', key: 'ArrowUp' },
   { label: '音量减小', key: 'ArrowDown' },
-  { label: '长按快进(3x)', key: 'ArrowRight' }, // 注：与快进同键，只是长按
-  { label: '长按回退', key: 'ArrowLeft' },
   { label: '1倍速', key: '1' },   // Shift+1，但需放开数字键
   { label: '2倍速', key: '2' },
   { label: '3倍速', key: '3' }
@@ -26,7 +24,6 @@ const interactKeys = [
 const fullscreenKeys = [
   { label: '全屏/退出 (F)', key: 'f' },
   { label: '退出全屏 (Esc)', key: 'Escape' },
-  { label: 'Shift+全屏', key: 'F' },  // 实际上与 F 相同，只是组合
   { label: '浏览器全屏 (F11)', key: 'F11' }
 ];
 
@@ -42,7 +39,6 @@ const navigationKeys = [
 ];
 
 const liveKeys = [
-  { label: '画中画 (Alt+F)', key: 'f' },  // 与全屏键重复，但保留
   { label: '快捷发言 F1', key: 'F1' },
   { label: '快捷发言 F2', key: 'F2' },
   { label: '快捷发言 F3', key: 'F3' },

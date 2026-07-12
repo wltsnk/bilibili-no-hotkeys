@@ -62,8 +62,6 @@
     }
   });
 
-  // 注册事件（捕获阶段）
+  // 注册事件（捕获阶段，仅 keydown 即可覆盖所有快捷键）
   document.addEventListener('keydown', blockKeydown, true);
-  document.addEventListener('keyup', blockKeydown, true);
-  document.addEventListener('keypress', blockKeydown, true);
 })();
