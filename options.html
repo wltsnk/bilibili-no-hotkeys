@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>B站快捷键自定义</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; padding: 20px; max-width: 700px; margin: auto; }
+    h2 { color: #00a1d6; }
+    .key-group { display: flex; flex-wrap: wrap; gap: 10px; margin: 15px 0; }
+    .key-item { display: flex; align-items: center; gap: 5px; width: 180px; }
+    .key-item input { margin-right: 5px; }
+    .custom-keys { margin-top: 20px; }
+    #customKeyInput { padding: 5px; width: 200px; }
+    button { padding: 5px 15px; cursor: pointer; }
+    .note { color: #666; font-size: 13px; margin-top: 20px; }
+    .status { color: green; margin-left: 10px; }
+    .description { color: #888; font-size: 12px; margin-left: 5px; }
+  </style>
+</head>
+<body>
+  <h2>🎮 B站快捷键自定义</h2>
+  <p>勾选你希望在B站<strong>保留生效</strong>的按键（其余按键在非输入区域将被禁止）。<br>
+     默认已包含空格、方向键和回车。刷新B站页面后生效。</p>
+
+  <h3>播放控制</h3>
+  <div class="key-group" id="playbackKeys"></div>
+
+  <h3>点赞投币弹幕</h3>
+  <div class="key-group" id="interactKeys"></div>
+
+  <h3>全屏 / 退出</h3>
+  <div class="key-group" id="fullscreenKeys"></div>
+
+  <h3>页面 / 分P / 滚动</h3>
+  <div class="key-group" id="navigationKeys"></div>
+
+  <h3>直播常用</h3>
+  <div class="key-group" id="liveKeys"></div>
+
+  <h3>其他功能键</h3>
+  <div class="key-group" id="functionKeys"></div>
+
+  <div class="custom-keys">
+    <h3>手动添加按键</h3>
+    <p>输入按键的 <code>key</code> 或 <code>code</code> 值（例如 <code>w</code>、<code>F1</code>、<code>Escape</code>、<code>Space</code>），然后点击添加。<br>
+       可在 <a href="https://keycode.info/" target="_blank">keycode.info</a> 按一下查看准确值。</p>
+    <input type="text" id="customKeyInput" placeholder="例如：KeyW 或 w">
+    <button id="addCustomKey">添加</button>
+    <span class="status" id="addStatus"></span>
+    <div class="key-group" id="customKeyList"></div>
+  </div>
+
+  <p class="note">修改后自动保存。已打开的B站页面需手动刷新才会应用新规则。</p>
+
+  <script src="options.js"></script>
+</body>
+</html>
